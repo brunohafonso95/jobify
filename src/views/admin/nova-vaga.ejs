@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jobify - DevPleno</title>
+        <link rel="stylesheet" type="text/css" href="../../styles/main.css"/>
+    </head>
+    <body>
+        <div class="main-wrap">
+            <%- include('../header') %>
+            <h3 class="main-wrap__section-title">
+                <span>Nova vaga:</span>
+                <a class="main-wrap__section-title__button" href="/admin/vagas">vagas</a>
+            </h3>
+            <form class="vaga-form" method="post">
+                <div class="vaga-form__group">
+                    <label for="categoriaId" class="vaga-form__group__label">Categoria da vaga:</label>
+                    <select name="categoriaId" required="required">
+                        <option value="">Selecione uma categoria</option>
+                        <% categorias.forEach(categoria => { %>
+                            <option value="<%= categoria.categoriaId %>"><%= categoria.name %></option>    
+                        <% }); %>
+                    </select>
+                </div>
+                <div class="vaga-form__group">
+                    <label for="name" class="vaga-form__group__label">Titulo da vaga:</label>
+                    <input type="text" name="name"  placeholder="digite o nome da vaga" required="required"/>
+                </div>
+                <div class="vaga-form__group">
+                    <label for="descricao" class="vaga-form__group__label">Descrição da vaga:</label>
+                    <textarea type="text" name="descricao" placeholder="digite a descrição da vaga" required="required"></textarea>
+                </div>
+                <div class="vaga-form_group">
+                    <input class="submit-button" type="submit" value="Salvar vaga">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

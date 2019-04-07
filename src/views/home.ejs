@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jobify - DevPleno</title>
+        <link rel="stylesheet" type="text/css" href="styles/main.css"/>
+    </head>
+    <body>
+        <div class="main-wrap">
+            <%- include('header') %>
+            <h3 class="main-wrap__section-title">Open Roles:</h3>
+            <div class="roles-wrap">
+                <% categorias.forEach(categoria => { %>
+                    <% if(categoria.vagas.length) { %>
+                        <div class="main-wrap__role">
+                            <h3 class="main-wrap__role__title"><%= categoria.name %></h3>
+                            <ul class="main-wrap__role__list">
+                                <% categoria.vagas.forEach(vaga => { %>
+                                    <li class="main-wrap__role__list-item"><a href="vaga/<%= vaga.vagaId %>" class="main-wrap__role__list-item__link"><%= vaga.name %></a></li>
+                                <% }); %>
+                            </ul>
+                        </div>
+                    <% } %>
+                <% }); %>
+            </div>
+        </div>
+    </body>
+</html>

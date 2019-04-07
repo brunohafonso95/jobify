@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jobify - DevPleno</title>
+        <link rel="stylesheet" type="text/css" href="../../styles/main.css"/>
+    </head>
+    <body>
+        <div class="main-wrap">
+            <%- include('../header') %>
+            <h3 class="main-wrap__section-title">
+                <span>Nova categoria:</span>
+                <a class="main-wrap__section-title__button" href="/admin/categorias">catagorias</a>
+            </h3>
+            <form class="vaga-form" method="post">
+                <div class="vaga-form__group">
+                </div>
+                <div class="vaga-form__group">
+                    <label for="name" class="vaga-form__group__label">Titulo da categoria:</label>
+                    <input type="text" name="name"  placeholder="digite o nome da categoria" required="required"/>
+                </div>
+                <div class="vaga-form_group">
+                    <input class="submit-button" type="submit" value="Salvar categoria">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

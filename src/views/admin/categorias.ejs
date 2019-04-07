@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jobify - DevPleno</title>
+        <link rel="stylesheet" type="text/css" href="../styles/main.css"/>
+    </head>
+    <body>
+        <div class="main-wrap">
+            <%- include('../header') %>
+            <h3 class="main-wrap__section-title">
+                <span>Admin Categorias:</span>
+                <a class="main-wrap__section-title__button" href="/admin/categorias/new">Adicionar nova categoria</a>
+            </h3>
+            <div class="roles-wrap">
+                <div class="main-wrap__role">
+                    <ul class="main-wrap__role__list">
+                        <% categorias.forEach(categoria => { %>
+                            <li class="main-wrap__role__list-item">
+                                <%= categoria.name %> |
+                                <a href="/admin/categorias/delete/<%= categoria.categoriaId %>" class="main-wrap__role__list-item__link">Excluir</a> |
+                                <a href="/admin/categorias/update/<%= categoria.categoriaId %>" class="main-wrap__role__list-item__link">Editar</a>
+                            </li>
+                        <% }); %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

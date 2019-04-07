@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-wrap {
+    padding: 15px;
+}
+
+.main-wrap__logo {
+    margin: auto;
+    padding: 0;
+    text-align: center;
+}
+
+.main-wrap__secondary-title,
+.main-wrap__section-title {
+    font-size: 24px;
+}
+
+.main-wrap__secondary-title {
+    font-weight: normal;
+    text-align: center;
+    margin-top: 57px;
+    padding: 0;
+}
+
+.main-wrap__section-title {
+    align-items: center;
+    background: #c4c4c4;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.main-wrap__section-title__button {
+    background: #5C0970;
+    border: 1px solid #000;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.roles-wrap {
+    padding: 0 25px;
+}
+
+.main-wrap__role__title {
+    padding: 0;
+}
+
+.main-wrap__role__list {
+    list-style: none;
+}
+
+.main-wrap__role__list-item__link {
+    color: #000;
+    text-decoration: none;
+}
+
+.main-wrap__role__list-item__link:hover {
+    border-bottom: 1px solid #000;
+}
+
+.vaga-form {
+    align-items: center;
+    background: #c4c4c4;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0 30px 0;
+}
+
+.vaga-form__group {
+    margin: 5px 0;
+}
+
+.vaga-form__group__label {
+    display: block;
+}
+
+.vaga-form__group input {
+    padding: 4px;
+    width: 540px;
+}
+
+.vaga-form__group select {
+    padding: 4px;
+    width: 540px;
+}
+
+.vaga-form__group textarea {
+    height: 220px;
+    padding: 8px;
+    width: 540px;
+}
+
+.submit-button {
+    background: #5C0970;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    width: 540px;
+}
