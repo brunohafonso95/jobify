@@ -8,7 +8,7 @@ app.use(express.static('src/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 const routes = require('./routes');
 
-app.use((req, res, next) => {
+app.use('/admin', (req, res, next) => {
     if(req.hostname === 'localhost') {
         next();
     } else {

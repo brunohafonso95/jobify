@@ -13,7 +13,7 @@ module.exports = app => {
             vagasController = new VagasController(db);
         })
         .catch(error => console.error(error));
-
+        
     app.get('/', async (req, res) => {
         const categoriasDb = await categoriasController.getAllCategories();
         const vagas = await vagasController.getAllVagas();
