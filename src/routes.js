@@ -1,7 +1,6 @@
-const { resolve } = require('path');
 const initDataBase = require('./config/database');
-const CategoriasController = require(resolve(__dirname + 'controllers/categoriasController'));
-const VagasController = require(resolve(__dirname +  'controllers/vagasController'));
+const CategoriasController = require('./controllers/categoriasController');
+const VagasController = require('./controllers/vagasController');
 
 let categoriasController;
 let vagasController;
