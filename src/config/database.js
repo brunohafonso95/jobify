@@ -1,5 +1,6 @@
 const sqlite = require('sqlite');
-const dbConnection = sqlite.open('banco.sqlite', { Promise });
+const { resolve } = require('path');
+const dbConnection = sqlite.open(resolve(__dirname + 'banco.sqlite'), { Promise });
 
 module.exports = () => new Promise(async (resolve, reject) => {
     try {
